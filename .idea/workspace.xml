@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d73b1a36-3970-4a84-ac7a-8dbec6a42ad2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerRuner/PagesforServer/Login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerRuner/PagesforServer/Register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerRuner/PagesforServer/main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerRuner/Procfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerRuner/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerRuner/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerRuner/response/BadRequestsHandler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerRuner/response/PagesforServerHandler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerRuner/response/StaticHandler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerRuner/response/public/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerRuner/response/requestHandler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerRuner/router.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerRuner/runtime.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerRuner/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerRuner/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerRuner/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerRuner/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/ServerRuner/server.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,14 +20,50 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ServerRuner/main.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="200">
-              <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerRuner/router.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ServerRuner/server.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerRuner/runtime.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerRuner/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerRuner/Procfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="12" selection-start-column="12" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -59,6 +84,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/ServerRuner/main.py" />
+        <option value="$PROJECT_DIR$/ServerRuner/Procfile" />
+        <option value="$PROJECT_DIR$/ServerRuner/server.py" />
       </list>
     </option>
   </component>
@@ -87,12 +114,6 @@
               <item name="Serverer" type="462c0819:PsiDirectoryNode" />
               <item name="ServerRuner" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Serverer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Serverer" type="462c0819:PsiDirectoryNode" />
-              <item name="ServerRuner" type="462c0819:PsiDirectoryNode" />
-              <item name="PagesforServer" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -100,6 +121,9 @@
     </panes>
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\Максим\PycharmProjects\Serverer" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Users\Максим\PycharmProjects\Serverer\ServerRuner" />
     </key>
@@ -129,7 +153,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ServerRuner/main.py" />
+      <option name="SCRIPT_NAME" value="D:\Users\Максим\PycharmProjects\Serverer\main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -162,15 +186,15 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2496474" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2496474" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" weight="0.3293011" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.3293011" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3293011" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3293011" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -184,12 +208,38 @@
     <entry file="file://$PROJECT_DIR$/ServerRuner/PagesforServer/main.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ServerRuner/main.py">
+    <entry file="file://$PROJECT_DIR$/ServerRuner/runtime.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRuner/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRuner/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
-          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRuner/router.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRuner/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>

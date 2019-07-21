@@ -2,7 +2,7 @@ import os
 from http.server import BaseHTTPRequestHandler
 from . router import routes
 from pathlib import  Path
-from  response.PagesforServerHandler import TemplateHandler
+from  ServerRuner.response.PagesforServerHandler import TemplateHandler
 from  ServerRuner.response.BadRequestsHandler import BadRequestHandler
 from  ServerRuner.response.StaticHandler import staticHandler
 
