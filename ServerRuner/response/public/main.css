@@ -1,0 +1,36 @@
+body{
+	background:#aad8f7;
+
+}
+#Register{
+	color:rgba(67, 74, 79 ,0.5);
+}
+#Register:hover{
+	color:rgba(35, 38, 40 ,1);
+	font-size:18px;
+}
+#Main{
+	margin-right:105px;
+	margin-top:200px;
+	text-align:center;
+}
+#Main2{
+	margin-right:105px;
+	margin-top:140px;
+	text-align:center;
+}
+.typeinf{
+	text-align:center;
+	border:1px solid #000000;
+	border-radius:10px;
+}
+#enter{
+	border:1px solid #000000;
+	border-radius:10px;
+	background-color:white;
+	font-size:13px;
+
+}
+#enter:hover{
+	transform: scale(1.1);
+}
