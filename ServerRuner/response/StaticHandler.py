@@ -1,4 +1,4 @@
-from  ServerRuner.response.requestHandler import RequestHandler
+from response.requestHandler import RequestHandler
 import os
 class staticHandler(RequestHandler):
     def __init__(self):

@@ -1,4 +1,4 @@
-from ServerRuner.response.requestHandler import RequestHandler
+from response.requestHandler import RequestHandler
 class TemplateHandler(RequestHandler):
     def __init__(self):#создали конструктор
         super().__init__()#взяли все с конструктора у RequestHandler(пример super в Tester.Superr)

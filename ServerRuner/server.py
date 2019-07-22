@@ -1,10 +1,10 @@
 import os
 from http.server import BaseHTTPRequestHandler
-from . router import routes
+from router import routes
 from pathlib import  Path
-from  ServerRuner.response.PagesforServerHandler import TemplateHandler
-from  ServerRuner.response.BadRequestsHandler import BadRequestHandler
-from  ServerRuner.response.StaticHandler import staticHandler
+from response.PagesforServerHandler import TemplateHandler
+from response.BadRequestsHandler import BadRequestHandler
+from response.StaticHandler import staticHandler
 
 class Server(BaseHTTPRequestHandler):
     def do_HEAD(self):
