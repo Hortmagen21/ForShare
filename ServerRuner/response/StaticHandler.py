@@ -15,7 +15,7 @@ class staticHandler(RequestHandler):
         try:
             print(extension,'тип файла')
             if extension in ('.jpg','.jpeg','.png'):
-                self.contents=open('public{}'.format(file_path), 'rb')
+                self.contents=open('response/public{}'.format(file_path), 'rb')
             else:
                 print('public{}'.format(file_path),'путь к файлу')
                 self.contents=open('response/public{}'.format(file_path),'r')

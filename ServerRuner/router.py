@@ -6,5 +6,8 @@ routes = {
     "/main":{
         "PagesforServer":"main.html"
     },
+    "/":{
+        "PagesforServer":"main.html"
+    }
 
 }
