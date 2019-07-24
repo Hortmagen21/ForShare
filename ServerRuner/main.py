@@ -14,4 +14,4 @@ if __name__ == '__main__':#убеждаемся что ето именно фа�
         pass
     httpd.server_close()
     print(time.asctime(), 'Server DOWN - %s:%s' % (HOST_NAME, PORT_NUMBER))
-    #master branche
+    #master branche1
