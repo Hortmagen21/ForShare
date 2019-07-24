@@ -3,7 +3,7 @@ import time
 from http.server import HTTPServer
 from server import Server
 HOST_NAME='localhost'
-PORT_NUMBER=int(sys.argv[2])
+PORT_NUMBER=int(sys.argv[1])
 #123
 if __name__ == '__main__':#убеждаемся что ето именно файл main
     httpd = HTTPServer((HOST_NAME, PORT_NUMBER), Server)#оздаем обьект сервера
