@@ -1,4 +1,4 @@
-from response.requestHandler import RequestHandler
+from .requestHandler import RequestHandler
 import os
 class staticHandler(RequestHandler):
     def __init__(self):
@@ -15,14 +15,15 @@ class staticHandler(RequestHandler):
         try:
             print(extension,'тип файла')
             if extension in ('.jpg','.jpeg','.png'):
-                self.contents=open('response/public{}'.format(file_path), 'rb')
+                self.contents=open('ServerRuner/response/public{}'.format(file_path), 'rb')
             else:
                 print('public{}'.format(file_path),'путь к файлу')
-                self.contents=open('response/public{}'.format(file_path),'r')
+                self.contents=open('ServerRuner/response/public{}'.format(file_path),'r')
             self.setContentType(extension)
             self.setStatus(200)
             return True
         except:
+            print("not found path")
             self.setContentType('not found')
             self.setStatus(404)
             return False
