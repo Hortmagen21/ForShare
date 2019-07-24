@@ -1,1 +1,1 @@
-web : python ServerRuner.main.py $PORT
+web : python main.py $PORT
