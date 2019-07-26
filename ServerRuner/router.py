@@ -3,8 +3,8 @@ routes = {
         "PagesforServer": "Login.html"},
     "/registration": {
         "PagesforServer": "Register.html"},
-    "/main":{
-        "PagesforServer":"main.html"
+    "/database":{
+        "PagesforServer":"fotLogin.json"
     },
     "/":{
         "PagesforServer":"main.html"
