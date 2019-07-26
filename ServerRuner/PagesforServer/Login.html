@@ -14,7 +14,16 @@
 		<p><input id='enter' type='button' value='Enter' onclick="Mainer()"/>
 		<p><a id='Register' href="registration">Regist</a>
 		<script type='text/javascript'>
-		function Mainer(){location.href="main"
+		function Mainer(){
+		var getforLogin=new XMLHttpRequest();
+		getfotLogin.open('GET','forLogin.json',false);
+		getforLogin.send();
+		if (getforLogin.status !=200){
+			location.href="main";
+			}
+		else{
+			alert(JSON.parse(getforLogin.responseText));
+		}
 		}
 		</script>
 		</div>
