@@ -1,0 +1,33 @@
+body{
+	background:#00315c;
+}
+#top{
+	margin-right:10px;
+	width:1090px;
+	height:50px;
+	border:1px solid orange;
+
+
+}
+#side-left{
+	width:89px;
+	height:450px;
+	border:1px solid orange;
+	float:left;
+
+}
+
+#mid{
+	width:1000px;
+	height:450px;
+	border:1px solid orange;
+	margin-left:90px;
+
+
+}
+#bot{
+	width:1090px;
+	height:90px;
+	border:1px solid orange;
+	margin-bottom:10px;
+}
