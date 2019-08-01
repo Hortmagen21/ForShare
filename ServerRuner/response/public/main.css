@@ -11,9 +11,11 @@ body{
 }
 #Main{
     height:600px;
-    min-height:400px;
+    min-height:1200px;
 	margin-right:105px;
+	margin-left:20px;
 	margin-top:200px;
+	margin-bottom:2000px;
 	text-align:center;
 }
 #Main2{
