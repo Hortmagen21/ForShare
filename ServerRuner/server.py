@@ -1,14 +1,28 @@
 import os
+import requests
 from http.server import BaseHTTPRequestHandler
 from router import routes
+import cgi
+
+import json
+
 from pathlib import  Path
 from response.PagesforServerHandler import TemplateHandler
 from response.BadRequestsHandler import BadRequestHandler
 from response.StaticHandler import staticHandler
+from response.RegistrationWorkHandler import RegistrationHandler
+from response.LoginWorkHandler import LoginHandler
 
 class Server(BaseHTTPRequestHandler):
+    def _set_headers(self,handler):
+        self.send_response(handler.getStatus())
+        self.send_header('Content-type','application/json')
+        self.end_headers()
     def do_HEAD(self):
         return
+    def do_PUT(self):
+        return
+
 
     def do_GET(self):
         #2self.respond()
@@ -32,7 +46,29 @@ class Server(BaseHTTPRequestHandler):
             'handler':handler
         })
     def do_POST(self):
-        return
+        ctype,pdict=cgi.parse_header(self.headers.get('content-type'))
+        if ctype!= 'application/json':
+            self.send_response(400)
+            self.end_headers()
+            return
+        print(ctype)
+        length=int(self.headers.get('content-length'))
+        print(length)
+        message=json.loads(self.rfile.read(length))
+        if self.path == "/login":
+            handler=LoginHandler()
+            handler.check(message)
+        else:
+            handler = RegistrationHandler()
+            handler.checkandadd(message)
+        self._set_headers(handler)
+        self.wfile.write(bytes(json.dumps(message),'UTF-8'))
+        #if self.path=="/"
+        #content_len=int(self.headers.get('Content-Length'))
+        #post_body =self.rfile.read(content_len)
+
+
+
 
     def handle_http(self,handler):
         status_code=handler.getStatus()#берем статус

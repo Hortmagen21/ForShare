@@ -4,21 +4,23 @@
 		<meta charset="UTF-8">
 		<title>Registration</title>
 		<link href='/main.css' rel="stylesheet" type="text/css"/>
+		<script type='text/javascript' src='/jquery-3.4.1.min.js'></script>
+		<script type='text/javascript' src='/mainButtons.js'></script>
 	</head>
 	<body>
 		<div id="Main2"><h1>Registration</h1>
 		Username:
-		<p><input class='typeinf' placeholder='Username'/>
+		<p><input class='typeinf' id="username" placeholder='Username'/>
 		<p>Password:
-		<p><input class='typeinf' placeholder='Password'/>
+		<p><input class='typeinf' id="password" placeholder='Password'/>
 		<p>Repeat Password:
 		<p><input class='typeinf' placeholder='Password'/>
 		<p>Phone number:
 		<p><input class='typeinf'placeholder='Phone number'/>
-		<p><input id='enter' type='button' value='Create account' onclick="Mainer()"/>
+		<p><input id='registbtn' type='button' value='Create account' onclick="Mainer()"/>
 		<p><a id='Register' href="login">Login</a>
 		<script type='text/javascript'>
-		function Mainer(){location.href="/"
+		function Mainer(){
 		}
 		</script>
 		</div>
