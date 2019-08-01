@@ -1,12 +1,12 @@
 import os
-import requests
+
 from http.server import BaseHTTPRequestHandler
 from router import routes
 import cgi
 
 import json
 
-from pathlib import  Path
+
 from response.PagesforServerHandler import TemplateHandler
 from response.BadRequestsHandler import BadRequestHandler
 from response.StaticHandler import staticHandler
