@@ -10,6 +10,8 @@ body{
 	font-size:18px;
 }
 #Main{
+    height:600px;
+    min-height:400px;
 	margin-right:105px;
 	margin-top:200px;
 	text-align:center;
