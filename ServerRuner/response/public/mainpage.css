@@ -3,7 +3,7 @@ body{
 }
 #top{
 	margin-right:10px;
-	width:1090px;
+
 	height:50px;
 	min-height:200px;
 	border:1px solid orange;
@@ -11,7 +11,7 @@ body{
 
 }
 #side-left{
-	width:89px;
+
 	height:450px;
 	min-height:1200px;
 	border:1px solid orange;
@@ -20,7 +20,7 @@ body{
 }
 
 #mid{
-	width:1000px;
+
 	height:450px;
 	min-height:1200px;
 	border:1px solid orange;
@@ -29,7 +29,7 @@ body{
 
 }
 #bot{
-	width:1090px;
+
 	height:90px;
 	min-height:600px;
 	border:1px solid orange;
