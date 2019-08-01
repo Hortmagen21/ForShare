@@ -20,7 +20,7 @@ class RegistrationHandler(RequestHandler):
         print(contactLen,"длина массива")
         while i<contactLen and isDuplicate==False:
             if a["data"][i]["username"]==data["username"]:
-                self.setStatus(407)
+                self.setStatus(409)
                 isDuplicate=True
             i=i+1
             print(i,'значение i')
