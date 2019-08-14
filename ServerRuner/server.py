@@ -60,7 +60,8 @@ class Server(BaseHTTPRequestHandler):
             handler.check(message)
         else:
             handler = RegistrationHandler()
-            handler.checkandadd(message)
+            #handler.checkandadd(message)
+            handler.checkSQLData(message)#принимает только инт пароль
         self._set_headers(handler)
         self.wfile.write(bytes(json.dumps(message),'UTF-8'))
         #if self.path=="/"

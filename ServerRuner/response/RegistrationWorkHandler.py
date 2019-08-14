@@ -1,6 +1,7 @@
 from response.requestHandler import RequestHandler
 from pathlib import Path
 import json
+import psycopg2
 
 
 
@@ -29,5 +30,14 @@ class RegistrationHandler(RequestHandler):
             self.setStatus(200)
             a["data"].append({'username':data["username"],'password':data["password"]})
             path.write_text(json.dumps(a),encoding='utf-8')
-
+    def checkSQLData(self,data):
+        database=psycopg2.connect("dbname=d7f6m0it9u59pk user=iffjnrmpbopayf host=ec2-54-83-1-101.compute-1.amazonaws.com password=20d31f747b4397c839a05d6d70d2decd02b23a689d86773a84d8dcfa23428946 port=5432")
+        cursor=database.cursor()
+        cursor.execute("INSERT INTO AccountCreate (id,name,password) VALUES(%s,%s, %s)", (1,data["username"], data["password"]))
+        #cursor.execute("SELECT * FROM test;")
+        #cursor.fetchone()
+        #(1,data["username"], data["password"])
+        database.commit()
+        cursor.close()
+        database.close()
 

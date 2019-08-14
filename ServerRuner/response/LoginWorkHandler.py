@@ -12,6 +12,8 @@ class LoginHandler(RequestHandler):
         isDuplicate = False
         i = 0
         while i<contactLen and isDuplicate==False:
+            print(a["data"][i]["username"])
+            print(a["data"][i]["password"])
             if a["data"][i]["username"]==data["username"] and a["data"][i]["password"]==data["password"]:
                 self.setStatus(200)
                 isDuplicate = True

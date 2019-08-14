@@ -29,7 +29,7 @@ $('#registbtn').on('click',function(){
 
 });
 
-$('#enter').on('click',function(){
+$('#enter').on('click',function(){//Max acc bug
     var username;
     var password;
     username=jQuery('#username').val();
@@ -44,6 +44,9 @@ $('#enter').on('click',function(){
     success: function(msg){
     location.href="/";}
     })
+    }
+    else{
+    alert("incorect pass")
     }
 
 
