@@ -57,7 +57,8 @@ class Server(BaseHTTPRequestHandler):
         message=json.loads(self.rfile.read(length))
         if self.path == "/login":
             handler=LoginHandler()
-            handler.check(message)
+            #handler.check(message)
+            handler.checkSQLData(message)
         else:
             handler = RegistrationHandler()
             #handler.checkandadd(message)
