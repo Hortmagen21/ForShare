@@ -42,9 +42,9 @@ class RegistrationHandler(RequestHandler):
         else:
             self.setStatus(200)
 
-        #cursor.execute("SELECT * FROM test;")
-        #cursor.fetchone()
-        #(1,data["username"], data["password"])
+        cursor.execute("SELECT * FROM test;")
+        cursor.fetchone()
+        (1,data["username"], data["password"])
         database.commit()
         cursor.close()
         database.close()
