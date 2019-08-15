@@ -26,7 +26,7 @@ class LoginHandler(RequestHandler):
         cursor=database.cursor()
 
         try:
-            cursor.execute("INSERT INTO AccountCreate (id,name,password) VALUES(%s,%s, %s)", (1,data["username"], data["password"]))
+            cursor.execute("INSERT INTO acctester (id,name,password) VALUES(%s,%s, %s)", (1,data["username"], data["password"]))
         except:
             self.setStatus(200)
         else:
