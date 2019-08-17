@@ -57,12 +57,10 @@ class Server(BaseHTTPRequestHandler):
         message=json.loads(self.rfile.read(length))
         if self.path == "/login":
             handler=LoginHandler()
-            #handler.check(message)
             handler.checkSQLData(message)
         else:
             handler = RegistrationHandler()
-            #handler.checkandadd(message)
-            handler.checkSQLData(message)#принимает только инт пароль
+            handler.checkSQLData(message)
         self._set_headers(handler)
         self.wfile.write(bytes(json.dumps(message),'UTF-8'))
         #if self.path=="/"
