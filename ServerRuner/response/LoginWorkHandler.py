@@ -25,7 +25,7 @@ class LoginHandler(RequestHandler):
     def checkSQLData(self,data):
         database=psycopg2.connect("dbname=d7f6m0it9u59pk user=iffjnrmpbopayf host=ec2-54-83-1-101.compute-1.amazonaws.com password=20d31f747b4397c839a05d6d70d2decd02b23a689d86773a84d8dcfa23428946 port=5432")
         cursor=database.cursor()
-        cursor.execute("SELECT * FROM acctester WHERE name='{}'".format(data["username"]))
+        cursor.execute("SELECT * FROM databaseSQL WHERE name='{}'".format(data["username"]))
         # row возвращает в кортежах столбец(DATApsycopg.py infa)
         self.setStatus(409)
         for row in cursor.fetchall():
