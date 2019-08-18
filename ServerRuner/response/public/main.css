@@ -13,15 +13,21 @@ body{
     height:600px;
     min-height:1200px;
 	margin-right:105px;
-	margin-left:20px;
+	margin-left:35px;
 	margin-top:200px;
 	margin-bottom:2000px;
+	padding:200px;
 	text-align:center;
+
+
 }
 #Main2{
 	margin-right:105px;
+	min-height:1200px;
 	margin-top:140px;
 	text-align:center;
+
+
 }
 .typeinf{
 	text-align:center;
@@ -46,4 +52,9 @@ body{
 }
 #registbtn:hover{
 	transform: scale(1.1);
+}
+.text{
+font-size:165%;}
+#bigtext{
+font-size:300%;
 }
