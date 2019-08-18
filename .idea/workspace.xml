@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d73b1a36-3970-4a84-ac7a-8dbec6a42ad2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ServerRuner/response/public/photoPhotoshop/cloud-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ServerRuner/response/public/photoPhotoshop/cloud-2upgr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ServerRuner/response/public/photoPhotoshop/cloud-3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ServerRuner/PagesforServer/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/ServerRuner/PagesforServer/Login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerRuner/PagesforServer/Register.html" beforeDir="false" afterPath="$PROJECT_DIR$/ServerRuner/PagesforServer/Register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ServerRuner/response/public/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/ServerRuner/response/public/main.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ServerRuner/PagesforServer/Login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+            <state relative-caret-position="275">
+              <caret line="11" column="60" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -59,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ServerRuner/response/public/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+            <state relative-caret-position="262">
+              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -152,8 +155,8 @@
         <option value="$PROJECT_DIR$/ServerRuner/response/LoginWorkHandler.py" />
         <option value="$PROJECT_DIR$/ServerRuner/response/public/mainpage.css" />
         <option value="$PROJECT_DIR$/ServerRuner/PagesforServer/Register.html" />
-        <option value="$PROJECT_DIR$/ServerRuner/PagesforServer/Login.html" />
         <option value="$PROJECT_DIR$/ServerRuner/response/public/main.css" />
+        <option value="$PROJECT_DIR$/ServerRuner/PagesforServer/Login.html" />
       </list>
     </option>
   </component>
@@ -200,6 +203,14 @@
               <item name="response" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Serverer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Serverer" type="462c0819:PsiDirectoryNode" />
+              <item name="ServerRuner" type="462c0819:PsiDirectoryNode" />
+              <item name="response" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="photoPhotoshop" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -211,15 +222,16 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\Максим\PycharmProjects\Serverer\ServerRuner\response\public\photoPhotoshop" />
+      <recent name="D:\Users\Максим\PycharmProjects\Serverer\ServerRuner" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\Максим\PycharmProjects\Serverer\ServerRuner\response\public\photoPhotoshop" />
+      <recent name="D:\Users\Максим\PycharmProjects\Serverer\ServerRuner\response\public" />
+      <recent name="D:\Users\Максим\PycharmProjects\Serverer\ServerRuner\PagesforServer\photoPhotoshop" />
       <recent name="D:\Users\Максим\PycharmProjects\Serverer\ServerRuner\PagesforServer" />
       <recent name="D:\Users\Максим\PycharmProjects\Serverer\ServerRuner\response" />
-      <recent name="D:\Users\Максим\PycharmProjects\Serverer\ServerRuner" />
-      <recent name="D:\Users\Максим\PycharmProjects\Serverer\ServerRuner\response\public" />
-      <recent name="D:\Users\Максим\PycharmProjects\Serverer" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Users\Максим\PycharmProjects\Serverer\ServerRuner" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -523,13 +535,6 @@
     <entry file="file://$PROJECT_DIR$/ServerRuner/response/public/jquery-3.4.1.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ServerRuner/PagesforServer/Login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ServerRuner/response/public/mainpage.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -539,8 +544,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ServerRuner/response/public/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        <state relative-caret-position="262">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRuner/PagesforServer/Login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="60" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
         </state>
       </provider>
     </entry>
