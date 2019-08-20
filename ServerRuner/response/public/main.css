@@ -22,9 +22,13 @@ body{
 
 }
 #Main2{
+	height:600px;
+    min-height:1200px;
 	margin-right:105px;
-	min-height:1200px;
-	margin-top:140px;
+	margin-left:60px;
+	margin-top:200px;
+	margin-bottom:2000px;
+	padding:200px;
 	text-align:center;
 
 
