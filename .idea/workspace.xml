@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d73b1a36-3970-4a84-ac7a-8dbec6a42ad2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ServerRuner/response/public/photoPhotoshop/acc-icon2.0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerRuner/response/public/photoPhotoshop/acc-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerRuner/response/public/photoPhotoshop/phone-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ServerRuner/response/public/photoPhotoshop/sms-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerRuner/PagesforServer/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/ServerRuner/PagesforServer/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ServerRuner/response/public/mainpage.css" beforeDir="false" afterPath="$PROJECT_DIR$/ServerRuner/response/public/mainpage.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,11 +21,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ServerRuner/response/public/mainpage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="55" column="3" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
+            <state relative-caret-position="287">
+              <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -54,7 +48,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ServerRuner/PagesforServer/main.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
@@ -67,7 +61,7 @@
         <entry file="file://$PROJECT_DIR$/ServerRuner/response/public/main.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1013">
-              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -156,8 +150,8 @@
         <option value="$PROJECT_DIR$/ServerRuner/response/public/main.css" />
         <option value="$PROJECT_DIR$/ServerRuner/PagesforServer/Login.html" />
         <option value="$PROJECT_DIR$/ServerRuner/PagesforServer/Register.html" />
-        <option value="$PROJECT_DIR$/ServerRuner/response/public/mainpage.css" />
         <option value="$PROJECT_DIR$/ServerRuner/PagesforServer/main.html" />
+        <option value="$PROJECT_DIR$/ServerRuner/response/public/mainpage.css" />
       </list>
     </option>
   </component>
@@ -539,14 +533,7 @@
     <entry file="file://$PROJECT_DIR$/ServerRuner/response/public/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1013">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServerRuner/response/public/mainpage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="55" column="3" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -554,6 +541,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="31" column="62" selection-start-line="31" selection-start-column="62" selection-end-line="31" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRuner/response/public/mainpage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
         </state>
       </provider>
     </entry>

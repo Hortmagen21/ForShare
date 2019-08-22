@@ -50,9 +50,11 @@ padding-top:42px;
 }
 #phoneLogo{
 padding-top:42px;
- padding-left:50px;
+ padding-left:5px;
 }
 
-li :hover{
-    background:rgba(151, 151, 151 ,0.1);
+img:hover{
+ -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 0px rgba(0, 0, 0, 0.3);
+ -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 0px rgba(0, 0, 0, 0.3);
+ box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.3), 0 1px 0px rgba(0, 0, 0, 0.1);
 }
