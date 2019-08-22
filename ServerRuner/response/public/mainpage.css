@@ -4,9 +4,10 @@ body{
 #top{
 
 
-	height:50px;
-	min-height:200px;
-	border:1px solid orange;
+	padding-top:35px;
+
+	min-height:100px;
+	border:1px solid black;
 
 
 }
@@ -14,7 +15,7 @@ body{
 
 	height:450px;
 	min-height:1200px;
-	border:1px solid orange;
+	border:1px solid black;
 	float:left;
 
 }
@@ -23,8 +24,8 @@ body{
 
 	height:450px;
 	min-height:1200px;
-	border:1px solid orange;
-	margin-left:90px;
+	border:1px solid black;
+	/*margin-left:90px;*/
 
 
 }
@@ -34,4 +35,24 @@ body{
 	min-height:600px;
 	border:1px solid orange;
 	margin-bottom:10px;
+}
+ ul, li {
+    display:block;
+    padding:0;
+    margin:0;
+}
+.menu{
+}
+.menu__item{
+}
+#smsLogo{
+padding-top:42px;
+}
+#phoneLogo{
+padding-top:42px;
+ padding-left:50px;
+}
+
+li :hover{
+    background:rgba(151, 151, 151 ,0.1);
 }
