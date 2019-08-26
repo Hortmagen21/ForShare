@@ -19,8 +19,9 @@ function jQ_append(id_of_input)
     success: function(msg){
     text=msg["getname"]["name"]
     var input_id="#"+id_of_input;
+    if($(input_id).val()==" "){
     $(input_id).val($(input_id).val()+text);
-
+    }
     }
     })
 
