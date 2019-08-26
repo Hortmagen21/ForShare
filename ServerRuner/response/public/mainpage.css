@@ -73,7 +73,7 @@ img:hover{
 }
 #textbox{
     border-color:rgba(0, 0, 0 ,0);
-    width:100px;
+    width:25%;
     font-family: 'Lobster', cursive;
     font-size:30px;
     box-shadow:none;
