@@ -8,6 +8,9 @@ routes = {
     },
     "/":{
         "PagesforServer":"main.html"
+    },
+    "http://localhost:1000/":{
+        "PagesforServer": "main.html"
     }
 
 

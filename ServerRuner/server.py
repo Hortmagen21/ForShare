@@ -12,7 +12,8 @@ from response.BadRequestsHandler import BadRequestHandler
 from response.StaticHandler import staticHandler
 from response.RegistrationWorkHandler import RegistrationHandler
 from response.LoginWorkHandler import LoginHandler
-
+from response.mainInputHandler import InputHandler
+#urlib
 class Server(BaseHTTPRequestHandler):
     def _set_headers(self,handler):
         self.send_response(handler.getStatus())
@@ -28,10 +29,21 @@ class Server(BaseHTTPRequestHandler):
         #2self.respond()
         split_path=os.path.splitext(self.path)#ми разбиваем путь на все что до формат и сам формат(нам нужен html)подробно в Tester.Ospath
         request_extension=split_path[1]#взяли формат файла
+        params= os.path.split(split_path[0])#отделяем параметры от ссылки
+        try:
+
+            if params[1][0]=="?":#знак ? указует на параметры
+                pather=params[0]#pather путь к файлу без параметров
+                mainPath=os.path.split(pather)#берем конец ссылки что есть аналог self.path
+                p="/"+mainPath[1]#p=self.path
+            else:
+                p=self.path
+        except:
+            p=self.path
         if request_extension is '' or request_extension is '.html':#проверяем чтоб html
-            if self.path in routes:
+            if p in routes:
                 handler=TemplateHandler()
-                handler.find(routes[self.path])
+                handler.find(routes[p])
             else:
                 handler = BadRequestHandler()  # ето не html поетому ошибка
 
@@ -41,7 +53,7 @@ class Server(BaseHTTPRequestHandler):
             handler=BadRequestHandler()
         else:
             handler=staticHandler()
-            handler.find(self.path)
+            handler.find(p)
         self.respond({
             'handler':handler
         })
@@ -58,11 +70,15 @@ class Server(BaseHTTPRequestHandler):
         if self.path == "/login":
             handler=LoginHandler()
             handler.checkSQLData(message)
-        else:
+        elif self.path=="/registration":
             handler = RegistrationHandler()
             handler.checkSQLData(message)
+        else:#tokencheck in future
+            handler=InputHandler()
+            handler.takeSQLData(message)
+
         self._set_headers(handler)
-        self.wfile.write(bytes(json.dumps(message),'UTF-8'))
+        self.wfile.write(bytes(json.dumps(message),'UTF-8'))#json.dumps(message)
         #if self.path=="/"
         #content_len=int(self.headers.get('Content-Length'))
         #post_body =self.rfile.read(content_len)

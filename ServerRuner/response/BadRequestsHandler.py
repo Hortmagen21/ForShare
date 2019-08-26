@@ -4,3 +4,4 @@ class BadRequestHandler(RequestHandler):#если что то пошло не т
         super().__init__()
         self.contentType="text/plain"
         self.setStatus(404)
+        print("BadRequest")

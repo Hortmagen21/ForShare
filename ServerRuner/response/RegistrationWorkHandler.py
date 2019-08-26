@@ -16,6 +16,9 @@ class RegistrationHandler(RequestHandler):
             print("ИСКЛЮЧЕНИЕ!!!!!!!!!!")
             self.setStatus(409)
         else:
+            cursor.execute("SELECT * FROM databaseSQL WHERE name='{}'".format(data["username"]))
+            acc_info=cursor.fetchall()
+            data["gainId"]["id"] =acc_info[0][0]
             self.setStatus(200)
         database.commit()
         cursor.close()
