@@ -72,6 +72,7 @@ img:hover{
 
 }
 #textbox{
+    border-color:rgba(0, 0, 0 ,0);
     width:100px;
     font-family: 'Lobster', cursive;
     font-size:30px;
