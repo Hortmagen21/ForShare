@@ -1,5 +1,6 @@
 
 $('document').ready(function(){
+local_page="acc";//default отображение main page при загрузке(СТРАНИЦА АККА)
 
 if(window.location.pathname=="/"){
 jQ_append("textbox")
@@ -83,6 +84,11 @@ $('#entertest').on('click',function(){
     //Cookies.set("idr",a);
     //alert(Cookies.get("idr"));
 })
+
+/*$('#smsLogo').on('click'.function(){
+
+
+});*/
 function jQ_append(id_of_input)
 {
    //var id=location.search;
@@ -106,6 +112,19 @@ function jQ_append(id_of_input)
     }
     })
 }
+$('#smsLogo').on('click',function(){
+    if(local_page=="acc"){
+    local_page="chatroom";//remove() destroy
+    $('#photoSpace').hide();
+    $('#infoSpace').hide();
+    $('#input_name').show();
+    $('#emptyspace').show();
+    $('#people_container').show();
+
+    }
+
+})
+
 
 $("body").keydown(function (e){
     if(e.keyCode == 13){

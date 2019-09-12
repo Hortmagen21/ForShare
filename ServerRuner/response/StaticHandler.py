@@ -18,7 +18,7 @@ class staticHandler(RequestHandler):
                 self.contents=open('ServerRuner/response/public{}'.format(file_path), 'rb')
             else:
                 print('public{}'.format(file_path),'путь к файлу')
-                self.contents=open('ServerRuner/response/public{}'.format(file_path),'r')
+                self.contents=open('ServerRuner/response/public{}'.format(file_path),'r',encoding="utf-8")
             self.setContentType(extension)
             self.setStatus(200)
             return True

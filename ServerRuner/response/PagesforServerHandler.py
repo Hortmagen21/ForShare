@@ -6,7 +6,7 @@ class TemplateHandler(RequestHandler):
     def find(self,routeDate):#функция чтоб найти по route файл
         try:
             print('ServerRuner/PagesforServer/{}'.format(routeDate["PagesforServer"])+" путь к html")
-            template_file=open('ServerRuner/PagesforServer/{}'.format(routeDate["PagesforServer"]))#проверяем открываеться ли по данной сылке файл
+            template_file=open('ServerRuner/PagesforServer/{}'.format(routeDate["PagesforServer"]),encoding="utf-8")#проверяем открываеться ли по данной сылке файл
             self.contents=template_file#если да то помещяем в ранее созданный contents в конструкторе RequestHandler от которого ми наследуемся
             self.setStatus(200)#
             return True
