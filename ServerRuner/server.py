@@ -13,6 +13,7 @@ from response.StaticHandler import staticHandler
 from response.RegistrationWorkHandler import RegistrationHandler
 from response.LoginWorkHandler import LoginHandler
 from response.mainInputHandler import InputHandler
+from response.FinderById import FindNameHandler
 #urlib
 class Server(BaseHTTPRequestHandler):
     def _set_headers(self,handler):
@@ -67,15 +68,25 @@ class Server(BaseHTTPRequestHandler):
         length=int(self.headers.get('content-length'))
         print(length)
         message=json.loads(self.rfile.read(length))
-        if self.path == "/login":
+        if self.path =="/api/login":
+        #if message["functionDefine"]=="login":#self.path == "/login":
             handler=LoginHandler()
             handler.checkSQLData(message)
-        elif self.path=="/registration":
+        #elif message["functionDefine"]=="registration":
+        elif self.path =="/api/registration":
             handler = RegistrationHandler()
             handler.checkSQLData(message)
-        else:#tokencheck in future
+        #elif message["functionDefine"]=="namefielder":#tokencheck in future
+        elif self.path =="/api/datafielder":
             handler=InputHandler()
             handler.takeSQLData(message)
+        #elif message["functionDefine"]=="finder":
+        elif self.path =="/api/find_person":
+            handler=FindNameHandler();
+            handler.find_name_by_id(message)
+        else:
+            handler=BadRequestHandler();
+
 
         self._set_headers(handler)
         self.wfile.write(bytes(json.dumps(message),'UTF-8'))#json.dumps(message)

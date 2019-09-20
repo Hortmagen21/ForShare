@@ -3,7 +3,48 @@ $('document').ready(function(){
 local_page="acc";//default отображение main page при загрузке(СТРАНИЦА АККА)
 
 if(window.location.pathname=="/"){
-jQ_append("textbox")
+jQ_append("textbox");//запись имени в какойто обьект по айди
+}
+function switchMainWindow(current_window,desire_window){
+switch(current_window){
+case 'acc':
+    $('#acc_window').hide();
+    switch(desire_window){
+    case 'searchroom':
+        $('#input_space').show();
+        break;
+    case 'chatroom':
+        $('#messager_container').show();
+        break;
+    }
+break;
+case 'searchroom':
+    $('#input_space').hide();
+    switch(desire_window)   {
+        case 'acc':
+            $('#acc_window').show();
+            break;
+        case 'chatroom':
+            $('#messager_container').show();
+            break;
+
+    }
+break;
+case 'chatroom':
+    $('#messager_container').hide();
+    switch(desire_window){
+        case 'acc':
+            $('#acc_window').show();
+            break;
+        case 'searchroom':
+            $('#input_space').show();
+            break;
+
+
+
+    }
+break;
+}
 }
 function logInitilization(){
     var username;
@@ -14,7 +55,7 @@ function logInitilization(){
     var data={"username":username, "password":password,"gainId":{"id":0}}
     $.ajax({
     type: "POST",
-    url: "/login",
+    url: "/api/login",
     data: JSON.stringify(data),
     contentType: "application/json; charset=utf-8",
     success: function(msg){//msg change
@@ -43,7 +84,7 @@ function registration(){
     var data={"username":username, "password":password,"gainId":{"id":0}}
     $.ajax({
     type: "POST",
-    url: "/registration",
+    url: "/api/registration",
     data: JSON.stringify(data),
     contentType: "application/json; charset=utf-8",
     success: function(msg){
@@ -79,16 +120,8 @@ $('#enter').on('click',function (){
     logInitilization();
 });
 $('#entertest').on('click',function(){
-    //var a="2";
-    //alert(Cookies.set("idr","rt"));
-    //Cookies.set("idr",a);
-    //alert(Cookies.get("idr"));
+
 })
-
-/*$('#smsLogo').on('click'.function(){
-
-
-});*/
 function jQ_append(id_of_input)
 {
    //var id=location.search;
@@ -100,7 +133,7 @@ function jQ_append(id_of_input)
     //alert(typeof(int_id))
     $.ajax({
     type: "POST",
-    url: "/",
+    url: "/api/datafielder",
     data: JSON.stringify(data),
     contentType: "application/json; charset=utf-8",
     success: function(msg){
@@ -112,18 +145,83 @@ function jQ_append(id_of_input)
     }
     })
 }
+$('.trigger_chat').on('click',function(){
+    alert("sss");
+    switchMainWindow(local_page,"chatroom");
+    local_page="chatroom";
+});
 $('#smsLogo').on('click',function(){
-    if(local_page=="acc"){
-    local_page="chatroom";//remove() destroy
-    $('#photoSpace').hide();
-    $('#infoSpace').hide();
-    $('#input_name').show();
-    $('#emptyspace').show();
-    $('#people_container').show();
-
-    }
-
+    switchMainWindow(local_page,"searchroom");
+    local_page="searchroom";
 })
+$('#accLogo').on('click',function(){
+    switchMainWindow(local_page,"acc");
+    local_page="acc";
+})
+//var div_id=0;
+function find_people_fielder(name,receiver_id){
+
+        let founded_user_div=document.createElement('div');
+        let founded_user_photo_div=document.createElement('div');
+        let founded_user_name_div=document.createElement('div');
+        let butt_div=document.createElement('div');
+        let left_content_div=document.createElement('div');
+        let trigger_chat=document.createElement('input');
+        let hidden_text=document.createElement('div');
+        hidden_text.className='hidden_text';
+        hidden_text.innerHTML=receiver_id;
+        founded_user_div.className='founded_accs';
+        founded_user_photo_div.className='founded_accs_photo';
+        founded_user_name_div.className='founded_accs_name';
+        trigger_chat.className="trigger_chat";
+        butt_div.className="butt_div";
+        left_content_div.className="left_content_div";
+        founded_user_name_div.innerHTML=name;
+        butt_div.append(trigger_chat);
+        left_content_div.append(founded_user_photo_div);
+        left_content_div.append(founded_user_name_div);
+        founded_user_div.append(left_content_div);
+        founded_user_div.append(hidden_text);
+        founded_user_div.append(butt_div);
+        people_container.append(founded_user_div);
+
+}
+function delete_peopleInDiv(){
+    $('.founded_accs').remove();
+    //document.querySelector("#people_container").innerHTML = "";
+}
+$('#findbtn').on('click',function(){
+    var username=jQuery('#find').val();
+    data={"fusername":username,"name":[],'id':[]};
+    $.ajax({
+        type: "POST",
+        url: "/api/find_person",
+        data: JSON.stringify(data),
+        contentType: "application/json; charset=utf-8",
+        success: function(msg){
+        var isFull=true;//если что т внутри
+        try{
+        for(let i=0;i<msg["name"].length;i++){
+        delete_peopleInDiv();
+        }}
+        catch(e){
+        isFull=false;
+        for(let i=0;i<msg["name"].length;i++){
+        find_people_fielder(msg['name'][i],msg['id'][i]);
+        }}
+        if(isFull==true){
+        for(let i=0;i<msg["name"].length;i++){
+        find_people_fielder(msg['name'][i],msg['id'][i]);
+        }
+        }
+         $(".trigger_chat").attr('type','button');//чтоб все инпути (искуств)стали кнопками
+        }
+        })
+
+
+    })
+
+
 
 
 $("body").keydown(function (e){

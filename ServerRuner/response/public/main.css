@@ -39,6 +39,7 @@ body{
 	border-radius:10px;
 }
 #enter{
+    outline:none;
 	border:1px solid #000000;
 	border-radius:10px;
 	background-color:white;
@@ -46,15 +47,18 @@ body{
 
 }
 #enter:hover{
+    outline:none;
 	transform: scale(1.1);
 }
 #registbtn{
+    outline:none;
     border:1px solid #000000;
 	border-radius:10px;
 	background-color:white;
 	font-size:13px;
 }
 #registbtn:hover{
+    outline:none;
 	transform: scale(1.1);
 }
 .text{

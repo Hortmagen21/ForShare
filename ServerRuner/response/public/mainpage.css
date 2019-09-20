@@ -46,6 +46,10 @@ img:hover{
  -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 0px rgba(0, 0, 0, 0.3);
  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.3), 0 1px 0px rgba(0, 0, 0, 0.1);
 }
+#acc_window{
+height:80%;
+width:100%;
+}
 #photoSpace{
     height:20%;
     width:20%;
@@ -75,20 +79,88 @@ img:hover{
 }
 
 #input_name{
-padding-left:41%;
-
+/*padding-left:26%;*/
 }
 #find{
+outline:none;
 border-radius:50px;
 }
 #findbtn{
+outline:none;
 border-radius:50px;
 }
 #people_container{
-    height:600px;
+    overflow:auto;
+    height:900px;
     margin-left:200px;
     margin-right:200px;
     weight:50%;
+    margin-top:20px;
     border:1px solid black;
     border-radius:50px;
 }
+#input_space{
+text-align:center;
+}
+.founded_accs{
+    height=100px;
+    margin-top:20px;
+    border-radius:50px;
+    border:1px solid black;
+}
+.left_content_div{
+    height:80px;
+    width:90%;
+
+    float:left;
+}
+.founded_accs_photo{
+    margin-left:5%;
+
+    height:75px;
+    width:20%;
+    float:left;
+    border:1px solid black;
+
+}
+.founded_accs_name{
+    font-family: 'Lobster', cursive;
+    margin-left:25%;
+    height:75px;
+    width:60%;
+
+    padding-top:2%;
+    padding-left:5px;
+    text-align:left;
+
+}
+.butt_div{
+    margin-left:90%;
+    height:75px;
+    width:1%;
+
+
+}
+.hidden_text{
+    display:none;
+}
+
+#people_container::-webkit-scrollbar {
+    width: 20px;
+}
+
+#people_container::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+
+#people_container::-webkit-scrollbar-thumb {
+    background:rgba(158, 230, 190,0.5);
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
+}/*vty
