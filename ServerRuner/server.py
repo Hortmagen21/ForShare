@@ -14,6 +14,8 @@ from response.RegistrationWorkHandler import RegistrationHandler
 from response.LoginWorkHandler import LoginHandler
 from response.mainInputHandler import InputHandler
 from response.FinderById import FindNameHandler
+from response.FindGroupHandler import FindGroupHandler
+from response.CreatingChat import CreateChatHandler
 #urlib
 class Server(BaseHTTPRequestHandler):
     def _set_headers(self,handler):
@@ -82,12 +84,16 @@ class Server(BaseHTTPRequestHandler):
             handler.takeSQLData(message)
         #elif message["functionDefine"]=="finder":
         elif self.path =="/api/find_person":
-            handler=FindNameHandler();
+            handler=FindNameHandler()
             handler.find_name_by_id(message)
+        elif self.path=="/api/find_group":
+            handler=FindGroupHandler()
+            handler.find_group(message)
+        elif self.path=="/api/create_chat":
+            handler=CreateChatHandler()
+            handler.AddChat(message)
         else:
-            handler=BadRequestHandler();
-
-
+            handler=BadRequestHandler()
         self._set_headers(handler)
         self.wfile.write(bytes(json.dumps(message),'UTF-8'))#json.dumps(message)
         #if self.path=="/"

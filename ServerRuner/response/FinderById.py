@@ -24,3 +24,7 @@ class FindNameHandler(RequestHandler):
             #data["name"].append() = row[0][1]#массив кортежей(столбцов)
             #data['id']=row[0][0]
             self.setStatus(200)
+
+        database.commit()
+        cursor.close()
+        database.close()

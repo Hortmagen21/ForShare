@@ -1,6 +1,7 @@
 body{
 	background:#ffffff;
 }
+/*basic parting*/
 #top{
 	padding-top:35px;
 	min-height:100px;
@@ -46,6 +47,7 @@ img:hover{
  -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 0px rgba(0, 0, 0, 0.3);
  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.3), 0 1px 0px rgba(0, 0, 0, 0.1);
 }
+/* acc page*/
 #acc_window{
 height:80%;
 width:100%;
@@ -77,9 +79,16 @@ width:100%;
     background:rgba(0, 0, 0 ,0);
 
 }
-
+/* sms page*/
+#input_space{
+text-align:center;
+}
 #input_name{
-/*padding-left:26%;*/
+
+}
+#Group{
+font-family: 'Lobster', cursive;
+float:left;
 }
 #find{
 outline:none;
@@ -99,9 +108,8 @@ border-radius:50px;
     border:1px solid black;
     border-radius:50px;
 }
-#input_space{
-text-align:center;
-}
+
+/*creating chats with current user*/
 .founded_accs{
     height=100px;
     margin-top:20px;
@@ -134,6 +142,19 @@ text-align:center;
     text-align:left;
 
 }
+.founded_username{
+font-family: 'Lobster', cursive;
+height:35px;
+width:40%;
+}
+.founded_list_members{
+color:rgba(176, 175, 174,0.5);
+font-family: 'Lobster', cursive;
+overflow:hidden;
+height:25px;
+width:20%;
+
+}
 .butt_div{
     margin-left:90%;
     height:75px;
@@ -141,9 +162,10 @@ text-align:center;
 
 
 }
-.hidden_text{
+/*.hidden_text{
     display:none;
-}
+}*/
+/* changing curs*/
 
 #people_container::-webkit-scrollbar {
     width: 20px;
@@ -163,4 +185,32 @@ text-align:center;
 
 ::-webkit-scrollbar-thumb:hover {
     background: #b30000;
-}/*vty
+}
+/*chatdiv*/
+#messager_container{
+     height:900px;
+     /*border:1px solid black;*/
+}
+#members_container{
+    overflow:auto;
+    height:600px;
+    width:200px;
+    float:left;
+    border:1px solid black;
+    border-radius:50px;
+
+
+
+}
+#sms_contaioner{
+    height:600px;
+    width:720px;
+    border:1px solid black;
+    overflow:auto;
+    border-radius:50px;
+}
+#input_field{
+    border-radius:50px;
+    height:150px;
+    border:1px solid black;
+}
