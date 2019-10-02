@@ -3,15 +3,18 @@ import time
 from http.server import HTTPServer
 from server import Server
 HOST_NAME=''
-PORT_NUMBER=int(sys.argv[1])
+
+if (len(sys.argv) > 1):
+    PORT = int(sys.argv[1]) # custom port
+else:
+    PORT = 8000 # default port
 
 if __name__ == '__main__':#убеждаемся что ето именно файл main
-    httpd = HTTPServer((HOST_NAME, PORT_NUMBER), Server)#оздаем обьект сервера
-    print(time.asctime(), 'Server UP - %s:%s' % (HOST_NAME, PORT_NUMBER))
+    httpd = HTTPServer((HOST_NAME, PORT), Server)#оздаем обьект сервера
+    print(time.asctime(), 'Server UP - %s:%s' % (HOST_NAME, PORT))
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:
         pass
     httpd.server_close()
-    print(time.asctime(), 'Server DOWN - %s:%s' % (HOST_NAME, PORT_NUMBER))
-    #master branche1
+    print(time.asctime(), 'Server DOWN - %s:%s' % (HOST_NAME, PORT))
