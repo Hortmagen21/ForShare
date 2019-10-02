@@ -116,7 +116,7 @@ function jQ_append(id_of_input)
    data={"id":int_id,"getname":{"name":" "}};
     $.ajax({
     type: "POST",
-    url: "/api/datafielder",
+    url: "/api/me",
     data: JSON.stringify(data),
     contentType: "application/json; charset=utf-8",
     success: function(msg){
@@ -220,7 +220,7 @@ data={"my_Id":int_my_id,"int_receiver":int_receiver_id,"name_receiver":receiver_
 
  $.ajax({
         type: "POST",
-        url: "/api/create_chat",
+        url: "/api/chats",
         data: JSON.stringify(data),
         contentType: "application/json; charset=utf-8",
         success: function(msg){
@@ -258,7 +258,7 @@ $('#findbtn').on('click',function(){
      var isFull=true;
      $.ajax({
         type: "POST",
-        url: "/api/find_group",
+        url: "/api/group/search",
         data: JSON.stringify(data_group),
         contentType: "application/json; charset=utf-8",
         success: function(msg){
@@ -284,7 +284,7 @@ $('#findbtn').on('click',function(){
     data={"fusername":username,'my_id':my_id,"name":[],'id':[]};
     $.ajax({
         type: "POST",
-        url: "/api/find_person",
+        url: "/api/users/search",
         data: JSON.stringify(data),
         contentType: "application/json; charset=utf-8",
         success: function(msg){
