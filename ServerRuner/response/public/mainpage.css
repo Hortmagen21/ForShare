@@ -25,6 +25,7 @@ body{
 	border:1px solid black;
 	margin-bottom:10px;
 }
+/*top display*/
  ul, li {
     display:block;
     padding:0;
@@ -42,7 +43,7 @@ padding-top:42px;
  padding-left:5px;
 }
 
-img:hover{
+img:hover{/*shadow creating*/
  -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 0px rgba(0, 0, 0, 0.3);
  -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 0px rgba(0, 0, 0, 0.3);
  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.3), 0 1px 0px rgba(0, 0, 0, 0.1);
@@ -79,7 +80,8 @@ width:100%;
     background:rgba(0, 0, 0 ,0);
 
 }
-/* sms page*/
+/*page where creating list of blocks by current users by name which is typed */
+
 #input_space{
 text-align:center;
 }
@@ -109,7 +111,7 @@ border-radius:50px;
     border-radius:50px;
 }
 
-/*creating chats with current user*/
+
 .founded_accs{
     height=100px;
     margin-top:20px;
@@ -162,10 +164,8 @@ width:20%;
 
 
 }
-/*.hidden_text{
-    display:none;
-}*/
-/* changing curs*/
+
+/* changing curs for founded list of people*/
 
 #people_container::-webkit-scrollbar {
     width: 20px;
@@ -188,13 +188,16 @@ width:20%;
 }
 /*chatdiv*/
 #messager_container{
-     height:900px;
+     height:95%;
+     width:100%;
+     margin-left:8%;
+
      /*border:1px solid black;*/
 }
 #members_container{
     overflow:auto;
-    height:600px;
-    width:200px;
+    height:90%;
+    width:30%;
     float:left;
     border:1px solid black;
     border-radius:50px;
@@ -203,14 +206,14 @@ width:20%;
 
 }
 #sms_contaioner{
-    height:600px;
-    width:720px;
+    height:90% ;
+    width:70%;
     border:1px solid black;
     overflow:auto;
     border-radius:50px;
 }
 #input_field{
     border-radius:50px;
-    height:150px;
+    height:10%;
     border:1px solid black;
 }

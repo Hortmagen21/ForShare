@@ -16,13 +16,13 @@ class FindNameHandler(RequestHandler):
         except IndexError:
             isExist=False
             self.setStatus(404)
+        except:
+            self.setStatus(404)
         if isExist==True:
             for i in range(len(row)):#длина 1 части !
-                #row[i][1]!=""#not end!!
-                data["name"].append(row[i][1]) # массив кортежей(столбцов)
-                data['id'].append(row[i][0])
-            #data["name"].append() = row[0][1]#массив кортежей(столбцов)
-            #data['id']=row[0][0]
+                if data['my_id']!=str(row[i][0]):#data['my_id] retutn string number
+                    data["name"].append(row[i][1]) # массив кортежей(столбцов)
+                    data['id'].append(row[i][0])
             self.setStatus(200)
 
         database.commit()

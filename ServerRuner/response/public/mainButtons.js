@@ -127,10 +127,10 @@ function jQ_append(id_of_input)
     }
     },
     error: function (request, status, error) {
+        alert('relogin pls');
         location.href='/login';
-        alert(request.responseText);
     }
-    //EСЛИ ОТЗЫВ ПУСТОЙ ТО ПЕРЕХОД НА ЛОГИН!!!
+
     })
 }
 
@@ -199,7 +199,6 @@ function find_group_fielder(name,chat_id,members){
 
 function delete_peopleInDiv(){
     $('.founded_accs').remove();
-    //document.querySelector("#people_container").innerHTML = "";
 }
 $('#registbtn').on('click',function(){
     registration();
@@ -239,13 +238,13 @@ if(local_page!='chatroom'){
     local_page="chatroom";
     }
 })
-$('#smsLogo').on('click',function(){
+$('#smsLogo').on('click',() => {
  if(local_page!='searchroom'){
     switchMainWindow(local_page,"searchroom");
     local_page="searchroom";
     }
 })
-$('#accLogo').on('click',function(){
+$('#accLogo').on('click',() => {
 if(local_page!="acc"){
     switchMainWindow(local_page,"acc");
     local_page="acc";
@@ -281,7 +280,8 @@ $('#findbtn').on('click',function(){
          $(".trigger_group_chat").attr('type','button');
         }
         })
-    data={"fusername":username,"name":[],'id':[]};
+    my_id=Cookies.get('id');
+    data={"fusername":username,'my_id':my_id,"name":[],'id':[]};
     $.ajax({
         type: "POST",
         url: "/api/find_person",
