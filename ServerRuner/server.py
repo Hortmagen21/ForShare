@@ -1,6 +1,7 @@
 import os
 
 from http.server import BaseHTTPRequestHandler
+from http.cookies import BaseCookie
 from router import routes
 import cgi
 import urllib
@@ -40,73 +41,86 @@ class Server(BaseHTTPRequestHandler):
     def do_PUT(self):
         return
 
+    def is_api_request(self):
+        root_path = parse.urlparse(self.path).path[1:].split('/')[0]
+
+        return root_path == "api"
 
     def do_GET(self):
-        #2self.respond()
-        split_path=os.path.splitext(self.path)#ми разбиваем путь на все что до формат и сам формат(нам нужен html)подробно в Tester.Ospath
-        request_extension=split_path[1]#взяли формат файла
-        params= os.path.split(split_path[0])#отделяем параметры от ссылки
-        parsed_url=parse.urlsplit('/'+self.path)
-        print(parsed_url, "parsed_url")
-        my_query=urllib.parse.unquote(parsed_url.query)
-        print(str(my_query),'my query')
-        p='/'+parsed_url[1]+parsed_url[2]
-        parameters=dict(parse.parse_qs(parsed_url.query))
-        print(parameters,type(parameters),"PARAMSSS")
-        if p == '/api/me':
-            message =parameters
-            handler = InputHandler()
-            handler.takeSQLData(message)
-            self._set_headers(handler)
-            self.wfile.write(bytes(json.dumps(message), 'UTF-8'))
-        elif request_extension is '' or request_extension is '.html':#проверяем чтоб html
-            if p in routes:
-                handler=TemplateHandler()
-                handler.find(routes[p])
+        if self.is_api_request():
+            self.handle_api_request("GET")
+        else:
+            # 2self.respond()
+            # ми разбиваем путь на все что до формат и сам формат(нам нужен html)подробно в Tester.Ospath
+            split_path = os.path.splitext(self.path)
+            request_extension = split_path[1]  # взяли формат файла
+            # отделяем параметры от ссылки
+            params = os.path.split(split_path[0])
+            parsed_url = parse.urlsplit('/'+self.path)
+            print(parsed_url, "parsed_url")
+            my_query = urllib.parse.unquote(parsed_url.query)
+            print(str(my_query), 'my query')
+            p = '/'+parsed_url[1]+parsed_url[2]
+            parameters = dict(parse.parse_qs(parsed_url.query))
+            print(parameters, type(parameters), "PARAMSSS")
+
+            if request_extension is '' or request_extension is '.html':  # проверяем чтоб html
+                if p in routes:
+                    handler = TemplateHandler()
+                    handler.find(routes[p])
+                else:
+                    print(self.path, ' ', p)
+                    handler = BadRequestHandler()  # ето не html поетому ошибка
+
+            # 3else:
+                # 3handler=BadRequestHandler()#ето не html поетому ошибка
+            elif request_extension is '.py':
+                handler = BadRequestHandler()
             else:
-                print(self.path,' ',p )
-                handler = BadRequestHandler()  # ето не html поетому ошибка
+                handler = staticHandler()
+                handler.find(p)
 
-        #3else:
-            #3handler=BadRequestHandler()#ето не html поетому ошибка
-        elif request_extension is '.py':
-            handler=BadRequestHandler()
-        else:
-            handler=staticHandler()
-            handler.find(p)
-        self.respond({
-            'handler':handler
-        })
+            self.respond({
+                'handler': handler
+            })
+
     def do_POST(self):
-        message=self.message_opener()
-        if self.path =="/api/login":
 
-            handler=LoginHandler()
-            handler.checkSQLData(message)
-
-        elif self.path =="/api/signup":
-            handler = RegistrationHandler()
-            handler.checkSQLData(message)
-
-        elif self.path =="/api/me":
-            handler=InputHandler()
-            handler.takeSQLData(message)
-        elif self.path == '/api/users/search':
-            handler = FindNameHandler()
-            handler.find_name_by_id(message)
-        elif self.path=="/api/group/search":
-            handler=FindGroupHandler()
-            handler.find_group(message)
-        elif self.path=="/api/chats":
-            handler=CreateChatHandler()
-            handler.AddChat(message)
+        if self.is_api_request():
+            self.handle_api_request("POST")
         else:
-            handler=BadRequestHandler()
-        self._set_headers(handler)
-        self.wfile.write(bytes(json.dumps(message),'UTF-8'))#json.dumps(message)
-        #if self.path=="/"
-        #content_len=int(self.headers.get('Content-Length'))
-        #post_body =self.rfile.read(content_len)
+            message = self.message_opener()
+
+            if self.path == "/api/login":
+
+                handler = LoginHandler()
+                handler.checkSQLData(message)
+
+            elif self.path == "/api/signup":
+                handler = RegistrationHandler()
+                handler.checkSQLData(message)
+
+            elif self.path == "/api/me":
+                handler = InputHandler()
+                handler.takeSQLData(message)
+            elif self.path == '/api/users/search':
+                handler = FindNameHandler()
+                handler.find_name_by_id(message)
+            elif self.path == "/api/group/search":
+                handler = FindGroupHandler()
+                handler.find_group(message)
+            elif self.path == "/api/chats":
+                handler = CreateChatHandler()
+                handler.AddChat(message)
+            else:
+                handler = BadRequestHandler()
+            # self._set_headers(handler)
+            # self.wfile.write(bytes(json.dumps(message), 'UTF-8'))
+
+            # json.dumps(message)
+            # if self.path=="/"
+            # content_len=int(self.headers.get('Content-Length'))
+            #post_body =self.rfile.read(content_len)
 
 
 
@@ -127,3 +141,34 @@ class Server(BaseHTTPRequestHandler):
     def respond(self,opts):
         response=self.handle_http(opts['handler'])
         self.wfile.write(response)
+
+    def handle_api_request(self, type):
+        if self.path == '/api/me' and type == "GET":
+            self.me()
+
+        if self.path == '/api/login' and type == "POST":
+            self.login()
+
+    def me(self):
+        cookie = BaseCookie()
+        cookie.load(self.headers.get('Cookie'))
+
+        user_id = cookie['id'].value  # get user id from cookies
+        user = InputHandler().findUserById(user_id)
+
+        self.wfile.write(bytes(json.dumps(user), "UTF-8"))
+
+    def login(self):
+        content_len = int(self.headers.get('content-length', 0))
+        user_data = json.loads(self.rfile.read(content_len))
+        user_if_logged_in = InputHandler().loginUser(
+            user_data['username'], user_data['password'])
+
+        if user_if_logged_in != None:
+            self.send_response(200)
+            self.wfile.write(bytes(json.dumps(user_if_logged_in), "UTF-8"))
+        else:
+            self.send_response(409)
+            self.wfile.write("Invalid credentials")
+
+        self.end_headers()

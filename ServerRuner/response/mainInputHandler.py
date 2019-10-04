@@ -2,6 +2,10 @@ from response.requestHandler import RequestHandler
 import psycopg2
 from pathlib import Path
 import json
+
+import config
+
+
 class InputHandler(RequestHandler):
     def __init__(self):  # создали конструктор
         super().__init__()  # err in ajax
@@ -9,7 +13,7 @@ class InputHandler(RequestHandler):
 
     def takeSQLData(self, data):
         self.setStatus(200)
-        database = psycopg2.connect("dbname=d7f6m0it9u59pk user=iffjnrmpbopayf host=ec2-54-83-1-101.compute-1.amazonaws.com password=20d31f747b4397c839a05d6d70d2decd02b23a689d86773a84d8dcfa23428946 port=5432")
+        database = psycopg2.connect(config.DATABASE_URL)
         cursor = database.cursor()
         cursor.execute("SELECT * FROM databaseSQL WHERE id='{}'".format(int(data["id"][0])))
         #data["getname"]["name"]=cursor.fetchall()[0][1]
@@ -18,3 +22,38 @@ class InputHandler(RequestHandler):
         database.commit()
         cursor.close()
         database.close()
+
+    def findUserById(self, user_id):
+        conn = psycopg2.connect(config.DATABASE_URL)
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM databaseSQL WHERE id=%s", (user_id,))
+
+        id, username, _ = cursor.fetchone()
+
+        user = {
+            "id": id,
+            "username": username
+        }
+        cursor.close()
+        conn.close()
+
+        return user
+
+    def loginUser(self, username, password):
+        conn = psycopg2.connect(config.DATABASE_URL)
+        cursor = conn.cursor()
+
+        cursor.execute("SELECT * FROM databaseSQL WHERE name=%s", (username,))
+
+        user_if_exists = cursor.fetchone()
+
+        cursor.close()
+        conn.close()
+
+        if user_if_exists == None:
+            return None
+        else:
+            return {
+                "id": user_if_exists[0],
+                "username": user_if_exists[1],
+            }
