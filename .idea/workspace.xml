@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d73b1a36-3970-4a84-ac7a-8dbec6a42ad2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ServerRuner/response/public/ForTest/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/ServerRuner/response/public/ForTest/Test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerRuner/response/mainInputHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/ServerRuner/response/mainInputHandler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ServerRuner/response/public/mainButtons.js" beforeDir="false" afterPath="$PROJECT_DIR$/ServerRuner/response/public/mainButtons.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServerRuner/router.py" beforeDir="false" afterPath="$PROJECT_DIR$/ServerRuner/router.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ServerRuner/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/ServerRuner/server.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ServerRuner/response/public/mainButtons.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="286" column="31" lean-forward="true" selection-start-line="286" selection-start-column="14" selection-end-line="286" selection-end-column="31" />
+            <state relative-caret-position="327">
+              <caret line="124" column="18" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -33,14 +32,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ServerRuner/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="66" column="36" lean-forward="true" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
+            <state relative-caret-position="81">
+              <caret line="54" column="53" selection-start-line="54" selection-start-column="53" selection-end-line="54" selection-end-column="53" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerRuner/response/public/mainpage.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="194" column="32" selection-start-line="194" selection-start-column="32" selection-end-line="194" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -67,10 +75,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ServerRuner/response/mainInputHandler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ServerRuner/response/public/ForTest/Test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+            <state relative-caret-position="324">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -91,34 +111,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ServerRuner/response/FindGroupHandler.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ServerRuner/response/LoginWorkHandler.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="156">
               <caret line="14" column="92" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="92" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ServerRuner/response/FinderById.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -163,7 +159,6 @@
         <option value="$PROJECT_DIR$/ServerRuner/response/RegistrationWorkHandler.py" />
         <option value="$PROJECT_DIR$/ServerRuner/PagesforServer/Login.html" />
         <option value="$PROJECT_DIR$/ServerRuner/PagesforServer/Register.html" />
-        <option value="$PROJECT_DIR$/ServerRuner/response/mainInputHandler.py" />
         <option value="$PROJECT_DIR$/ServerRuner/response/PagesforServerHandler.py" />
         <option value="$PROJECT_DIR$/ServerRuner/response/StaticHandler.py" />
         <option value="$PROJECT_DIR$/ServerRuner/response/public/main.css" />
@@ -174,8 +169,9 @@
         <option value="$PROJECT_DIR$/ServerRuner/response/CreatingChat.py" />
         <option value="$PROJECT_DIR$/ServerRuner/response/FinderById.py" />
         <option value="$PROJECT_DIR$/ServerRuner/router.py" />
-        <option value="$PROJECT_DIR$/ServerRuner/response/public/mainButtons.js" />
         <option value="$PROJECT_DIR$/ServerRuner/response/public/ForTest/Test.py" />
+        <option value="$PROJECT_DIR$/ServerRuner/response/public/mainButtons.js" />
+        <option value="$PROJECT_DIR$/ServerRuner/response/mainInputHandler.py" />
         <option value="$PROJECT_DIR$/ServerRuner/server.py" />
       </list>
     </option>
@@ -401,19 +397,19 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27114093" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2738255" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986577" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49798658" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.9147651" visible="true" weight="0.3101983" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.0852349" side_tool="true" visible="true" weight="0.3101983" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.914094" visible="true" weight="0.3101983" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.08590604" side_tool="true" visible="true" weight="0.3101983" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -521,16 +517,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ServerRuner/response/mainInputHandler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ServerRuner/response/public/ForTest/DATApsycopg.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -552,13 +538,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="35" selection-start-column="35" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServerRuner/response/public/mainpage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="194" column="32" selection-start-line="194" selection-start-column="32" selection-end-line="194" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -623,13 +602,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ServerRuner/router.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ServerRuner/response/PagesforServerHandler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -637,30 +609,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRuner/router.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ServerRuner/response/public/ForTest/Test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        <state relative-caret-position="324">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ServerRuner/response/public/mainButtons.js">
+    <entry file="file://$PROJECT_DIR$/ServerRuner/response/public/mainpage.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="286" column="31" lean-forward="true" selection-start-line="286" selection-start-column="14" selection-end-line="286" selection-end-column="31" />
+        <state relative-caret-position="348">
+          <caret line="194" column="32" selection-start-line="194" selection-start-column="32" selection-end-line="194" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRuner/response/mainInputHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ServerRuner/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="66" column="36" lean-forward="true" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
+        <state relative-caret-position="81">
+          <caret line="54" column="53" selection-start-line="54" selection-start-column="53" selection-end-line="54" selection-end-column="53" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ServerRuner/response/public/mainButtons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="124" column="18" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
         </state>
       </provider>
     </entry>

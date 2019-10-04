@@ -84,7 +84,7 @@ function registration(){
     var data={"username":username, "password":password,"gainId":{"id":0}}
     $.ajax({
     type: "POST",
-    url: "/api/registration",
+    url: "/api/signup",
     data: JSON.stringify(data),
     contentType: "application/json; charset=utf-8",
     success: function(msg){
@@ -113,14 +113,16 @@ function registration(){
 function jQ_append(id_of_input)
 {
    var int_id=Cookies.get("id");
-   data={"id":int_id,"getname":{"name":" "}};
+   data=""
+  /*!!!*/ /*data='id=int_id'/*{"id":int_id,"getname":{"name":" "}};/*{"id":int_id,"getname":{"name":" "}}*/;
     $.ajax({
-    type: "POST",
-    url: "/api/me",
+    type: "GET",
+    url: "/api/me?id=int_id&name= ".replace('int_id',int_id),
     data: JSON.stringify(data),
-    contentType: "application/json; charset=utf-8",
+    content_type:"application/json; charset=utf-8"/*"application/x-www-form-urlencoded"*/,
     success: function(msg){
-    text=msg["getname"]["name"]
+    //text=msg["getname"]["name"]
+    text=msg['name']
     var input_id="#"+id_of_input;
     if($(input_id).val()==" "){
     $(input_id).val($(input_id).val()+text);
