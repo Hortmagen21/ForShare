@@ -5,6 +5,7 @@ from router import routes
 import cgi
 import urllib
 from urllib.parse import urlparse
+from urllib import parse
 import json
 
 
@@ -30,7 +31,6 @@ class Server(BaseHTTPRequestHandler):
             self.send_response(400)
             self.end_headers()
             return
-        print()
         length = int(self.headers.get('content-length'))
         message = json.loads(self.rfile.read(length))
         return message
@@ -46,31 +46,20 @@ class Server(BaseHTTPRequestHandler):
         split_path=os.path.splitext(self.path)#ми разбиваем путь на все что до формат и сам формат(нам нужен html)подробно в Tester.Ospath
         request_extension=split_path[1]#взяли формат файла
         params= os.path.split(split_path[0])#отделяем параметры от ссылки
-        #try:
-            #if params[1][0]=="?":#знак ? указует на параметры
-                #pather=params[0]#pather путь к файлу без параметров
-                #mainPath=os.path.split(pather)#берем конец ссылки что есть аналог self.path
-                #p="/"+mainPath[1]#p=self.path
-            #else:
-                #p=self.path
-        # except:
-            # p=self.path
-        #if for params!!!!
-        splited_dict_url = urlparse('/' + self.path)
-        p = '/' + splited_dict_url[1] + splited_dict_url[2]#URL with path
-        #parameters=urlparse('/'+self.path)[4]#query string in get
-        #parameters=urllib.parse.parse_qs(parameters,keep_blank_values=True,encoding='utf-8')#dict with parametrs
-        #for a,b in parameters.items():
-            #parameters=a#needed parametrs without dict
-            #break
-        #print(parameters,type(parameters),'param')
-        if p == '/api/users/search':
+        parsed_url=parse.urlsplit('/'+self.path)
+        print(parsed_url, "parsed_url")
+        my_query=urllib.parse.unquote(parsed_url.query)
+        print(str(my_query),'my query')
+        p='/'+parsed_url[1]+parsed_url[2]
+        parameters=dict(parse.parse_qs(parsed_url.query))
+        print(parameters,type(parameters),"PARAMSSS")
+        if p == '/api/me':
             message =parameters
-            handler = FindNameHandler()
-            handler.find_name_by_id(message)
+            handler = InputHandler()
+            handler.takeSQLData(message)
             self._set_headers(handler)
             self.wfile.write(bytes(json.dumps(message), 'UTF-8'))
-        if request_extension is '' or request_extension is '.html':#проверяем чтоб html
+        elif request_extension is '' or request_extension is '.html':#проверяем чтоб html
             if p in routes:
                 handler=TemplateHandler()
                 handler.find(routes[p])
@@ -95,7 +84,7 @@ class Server(BaseHTTPRequestHandler):
             handler=LoginHandler()
             handler.checkSQLData(message)
 
-        elif self.path =="/api/registration":
+        elif self.path =="/api/signup":
             handler = RegistrationHandler()
             handler.checkSQLData(message)
 
