@@ -113,11 +113,13 @@ function registration(){
 function jQ_append(id_of_input)
 {
    var int_id=Cookies.get("id");
-   data=""
+   data="id=int_id".replace('int_id',int_id);
+   //data={}
   /*!!!*/ /*data='id=int_id'/*{"id":int_id,"getname":{"name":" "}};/*{"id":int_id,"getname":{"name":" "}}*/;
     $.ajax({
     type: "GET",
-    url: "/api/me?id=int_id&name= ".replace('int_id',int_id),
+    //url: "/api/me?id=int_id&name= ".replace('int_id',int_id),
+    url: "/api/me",
     data: JSON.stringify(data),
     content_type:"application/json; charset=utf-8"/*"application/x-www-form-urlencoded"*/,
     success: function(msg){

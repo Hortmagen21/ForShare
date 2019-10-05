@@ -48,10 +48,10 @@ class Server(BaseHTTPRequestHandler):
         params= os.path.split(split_path[0])#отделяем параметры от ссылки
         parsed_url=parse.urlsplit('/'+self.path)
         print(parsed_url, "parsed_url")
-        my_query=urllib.parse.unquote(parsed_url.query)
+        my_query=urllib.parse.unquote(parsed_url.query,'utf-8')
         print(str(my_query),'my query')
         p='/'+parsed_url[1]+parsed_url[2]
-        parameters=dict(parse.parse_qs(parsed_url.query))
+        parameters=dict(parse.parse_qsl(parsed_url.query[3:-3]))
         print(parameters,type(parameters),"PARAMSSS")
         if p == '/api/me':
             message =parameters
@@ -88,9 +88,9 @@ class Server(BaseHTTPRequestHandler):
             handler = RegistrationHandler()
             handler.checkSQLData(message)
 
-        elif self.path =="/api/me":
-            handler=InputHandler()
-            handler.takeSQLData(message)
+        #elif self.path =="/api/me":
+            #handler=InputHandler()
+            #handler.takeSQLData(message)
         elif self.path == '/api/users/search':
             handler = FindNameHandler()
             handler.find_name_by_id(message)
